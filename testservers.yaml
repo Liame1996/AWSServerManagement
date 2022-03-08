@@ -1,0 +1,9 @@
+#Ansible
+-
+ host: testservers
+ tasks:
+  -
+    name: "Add package to server {{package}}"
+    yum: "name={{package}} state=latest
+  vars:
+    package: git
